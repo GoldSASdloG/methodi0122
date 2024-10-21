@@ -1,18 +1,27 @@
 import java.util.Scanner;
 
 public class Main {
-    public static int a = 0;
-    public static int b = 0;
+    private static int a = 0;
+    protected static int b;
     public static int[] array = {1, 2, 3, 4, 5};
 
     public static void main(String[] args) {
+        Phone phone = new Phone("347565476473", "a67", 34.3, 500);
+        Phone.madeIn = "chinaaaa";
+        System.out.println(phone.model);
+        System.out.println(phone.weight);
+        phone.answerCall("artem", "4536473645");
+        while (true){
+            phone.balans();
+            phone.payBalans();
+        }
 
-        printArray();
-        array[4] = getInput();
-        printArray();
-        a = getInput();
-        b = getInput();
-        printMethod();
+//        printArray();
+//        array[4] = getInput();
+//        printArray();
+//        a = getInput();
+//        b = getInput();
+//        printMethod();
     }
 
     private static void printMethod() {
