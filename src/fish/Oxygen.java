@@ -5,17 +5,15 @@ import java.util.Scanner;
 public class Oxygen {
     private double oxygenPressure;
 
-    public Oxygen(double oxygenPressure) {
-        this.oxygenPressure = oxygenPressure;
+    public Oxygen() {
     }
     public void checkDangerOxygen(){
-        if (oxygenPressure < 80){
+        double oxy = inputOxygen();
+        if (oxy < 80){
             System.out.println("Внимание низкий уровень кислорода");
-        }if (oxygenPressure > 120){
+        } else if (oxy > 120){
             System.out.println("Внимание высокий уровень кислорода");
-        }else {
-            System.out.println("Кислород в норме!");
-        };
+        } else System.out.println("Кислород в норме!");
     }
     public double inputOxygen(){
         System.out.println("введите показание кислорода");
